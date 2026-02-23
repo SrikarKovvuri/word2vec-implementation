@@ -1,0 +1,66 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            uptgjm45kuq7zzav05u6ufot7t3j15hn:
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 16
+                cpu_count_logical: 22
+                cudaVersion: "12.7"
+                disk:
+                    /:
+                        total: "183544836096"
+                        used: "177300025344"
+                email: srk2211@columbia.edu
+                executable: C:\Users\Srikars Den\AppData\Local\Programs\Python\Python312\python.exe
+                gpu: NVIDIA GeForce RTX 4060 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 3072
+                      memoryTotal: "8585740288"
+                      name: NVIDIA GeForce RTX 4060 Laptop GPU
+                      uuid: GPU-2d54717f-6a8c-5312-0265-0183ba055a50
+                host: DESKTOP-7HTD4FP
+                memory:
+                    total: "33945935872"
+                os: Windows-11-10.0.26200-SP0
+                program: C:\Users\Srikars Den\OneDrive\Desktop\word2vec\train.py
+                python: CPython 3.12.0
+                root: C:\Users\Srikars Den\OneDrive\Desktop\word2vec
+                startedAt: "2026-02-23T01:43:31.596389Z"
+                writerId: uptgjm45kuq7zzav05u6ufot7t3j15hn
+        m: []
+        python_version: 3.12.0
+        t:
+            "1":
+                - 1
+                - 5
+                - 49
+                - 51
+                - 53
+            "2":
+                - 1
+                - 5
+                - 49
+                - 51
+                - 53
+            "3":
+                - 16
+            "4": 3.12.0
+            "5": 0.25.0
+            "8":
+                - 3
+            "12": 0.25.0
+            "13": windows-amd64
+batch_size:
+    value: 128
+embedding_dim:
+    value: 64
+learning_rate:
+    value: 0.001
+num_epochs:
+    value: 5
+vocab_size:
+    value: 5001

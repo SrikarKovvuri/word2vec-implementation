@@ -1,0 +1,36 @@
+{
+  "os":  "Windows-11-10.0.26200-SP0",
+  "python":  "CPython 3.12.0",
+  "startedAt":  "2026-02-23T01:52:03.042491Z",
+  "program":  "C:\\Users\\Srikars Den\\OneDrive\\Desktop\\word2vec\\train.py",
+  "codePath":  "train.py",
+  "codePathLocal":  "train.py",
+  "email":  "srk2211@columbia.edu",
+  "root":  "C:\\Users\\Srikars Den\\OneDrive\\Desktop\\word2vec",
+  "host":  "DESKTOP-7HTD4FP",
+  "executable":  "C:\\Users\\Srikars Den\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "cpu_count":  16,
+  "cpu_count_logical":  22,
+  "gpu":  "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "183544836096",
+      "used":  "177321979904"
+    }
+  },
+  "memory":  {
+    "total":  "33945935872"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "memoryTotal":  "8585740288",
+      "cudaCores":  3072,
+      "architecture":  "Ada",
+      "uuid":  "GPU-2d54717f-6a8c-5312-0265-0183ba055a50"
+    }
+  ],
+  "cudaVersion":  "12.7",
+  "writerId":  "cr17pj5d9obcv20q37olsa3ffcn5ita3"
+}
