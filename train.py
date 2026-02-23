@@ -59,7 +59,6 @@ class SkipGramDataset(torch.utils.data.Dataset):
             return self.vocab['<UNK>'], self.vocab['<UNK>']
 
         ############################################################
-        # STUDENT IMPLEMENTATION START
         # 1. randomly sample one target token to train your embedding on
         # 2. for that selected target token, select a context token from 
         # its neighborhood window (defined by context_size)
@@ -87,9 +86,6 @@ class SkipGramDataset(torch.utils.data.Dataset):
 
         input_id = self.vocab.get(random_token, self.vocab['<UNK>'])
         context_id = self.vocab.get(random_context_token, self.vocab['<UNK>'])
-        ############################################################
-        # STUDENT IMPLEMENTATION END
-        ############################################################
         return input_id, context_id
 
 
@@ -107,7 +103,6 @@ def build_vocab(train_dataset, vocab_size=5000):
     """
 
     ############################################################
-    # STUDENT IMPLEMENTATION START
     # 1. convert all texts in train_dataset to tokens and keeping
     # track of the counts of each token
     # 2. convert the most common vocab_size tokens to IDs. All other
@@ -132,14 +127,10 @@ def build_vocab(train_dataset, vocab_size=5000):
         vocab[token] = word_id
         word_id +=1
 
-    ############################################################
-    # STUDENT IMPLEMENTATION END
-    ############################################################
     return vocab
 
 def compute_loss(model, inputs, targets, loss_fn):
     ############################################################
-    # STUDENT IMPLEMENTATION START
     # 1. obtain model's prediction of that input
     # 2. compute loss by comparing that prediction to the target
     ############################################################
@@ -147,9 +138,6 @@ def compute_loss(model, inputs, targets, loss_fn):
     model_prediction = model(inputs)
     loss = loss_fn(model_prediction, targets)
 
-    ############################################################
-    # STUDENT IMPLEMENTATION END
-    ############################################################
     return loss
 
 
@@ -164,19 +152,11 @@ def validation_step(model, validation_loader, loss_fn):
 
 
 def train(model, train_dataset, validation_dataset, vocab, wandb_online=True):
-    ############################################################
-    # STUDENT IMPLEMENTATION START
-    # we suggest using batch_size<=128, as too large could cause 
-    # OOM issues in gradescope's autograder
-    ############################################################
     # 5a) hyperparameters and loss function
     batch_size = 128
     num_epochs = 10
     learning_rate = 1e-3
     loss_fn = torch.nn.CrossEntropyLoss()
-    ############################################################
-    # STUDENT IMPLEMENTATION END
-    ############################################################
 
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
     train_loader = torch.utils.data.DataLoader(
@@ -212,7 +192,6 @@ def train(model, train_dataset, validation_dataset, vocab, wandb_online=True):
         train_losses = []
         for inputs, targets in train_loader:
             ############################################################
-            # STUDENT IMPLEMENTATION START
             # 1. clear the gradients stored in optimizer.
             # 2. compute the loss by calling compute_loss
             # 3. backpropagate the loss
@@ -222,10 +201,6 @@ def train(model, train_dataset, validation_dataset, vocab, wandb_online=True):
             loss = compute_loss(model, inputs, targets, loss_fn)
             loss.backward()
             optimizer.step()
-
-            ############################################################
-            # STUDENT IMPLEMENTATION END
-            ############################################################
 
             train_losses.append(loss.item())
             if current_step % 100 == 0:
